@@ -10,7 +10,7 @@ function App() {
       <ProfileCard>
         <ProfileHeader
           name="Thomas Opeyemi Stephen"
-          title="Senior Developer at Publica AI"
+          title="Senior Developer"
           avatar="https://media.licdn.com/dms/image/v2/D4D03AQEWFXPCzfCOKg/profile-displayphoto-crop_800_800/B4DZeMtGNmGYAQ-/0/1750412323255?e=1762387200&v=beta&t=8gFMGRIsWXWPub8jvIFIX1qPLRVqTte9A_Xq2ECALXQ"
         />
         <ProfileStats projects={22} followers={5000} following={100} />

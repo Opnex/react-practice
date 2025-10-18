@@ -3,11 +3,11 @@
   color: #333;
   text-align: center;
   padding: 40px 20px;
-  border-top: 3px solid #008751;
-  border-bottom: 3px solid #008751;
+  border-top: 3px solid rgb(66, 66, 213);
+  border-bottom: 3px solid rgb(66, 66, 213);
 }
 
 .location h2 {
-  color: #008751;
+  color: rgb(66, 66, 213);
   margin-bottom: 12px;
 }

@@ -1,8 +1,9 @@
 .header {
-  background: #008751; 
+ background: rgb(66, 66, 213);
   color: white;
   text-align: center;
   padding: 30px 10px;
+  border-radius: 5px;
   
 }
 

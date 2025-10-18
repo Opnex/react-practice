@@ -4,7 +4,7 @@ function Skills() {
     const skills =  ["HTML", "CSS", "Javascript", "React", "Python"];
 
     return (
-        <section className="skilss">
+        <section className="skills">
             <h2>My Language Skills</h2>
             <ul>
                 {skills.map((skill) => (
