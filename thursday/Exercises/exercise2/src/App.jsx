@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import './App.css';
+import ProductCard from './components/ProductCard';
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <ProductCard
+        name="Jollof-Rice & coleslaw"
+        price={10000}
+        image="https://d2j6dbq0eux0bg.cloudfront.net/images/87385252/4118598097.jpg"
+        inStock={true}
+      />
+      <ProductCard
+        name="Fried-Rice & Plantain"
+        price={8000}
+        image="https://www.sweetnspicee.com/wp-content/uploads/2020/11/LEY_1301-scaled.jpg"
+        inStock={true}
+      />
+      <ProductCard
+        name="Goatmeat Peppersoup"
+        price={5000}
+        image="https://www.chefadora.com/_next/image?url=https%3A%2F%2Fchefadora.b-cdn.net%2Fmedium_1000101431_57d7567d47.jpg&w=1080&q=75"
+        inStock={false}
+      />
+    </div>
+  );
 }
-
-export default App
+export default App;
