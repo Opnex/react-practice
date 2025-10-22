@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import MenuList from './MenuList';
+import Cart from './Cart';
+import './RestaurantApp.css';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cartItems, setCartItems] = useState([]);
+
+  const menuItems = [
+    { id: 1, name: 'Jollof Rice', price: 1500 },
+    { id: 2, name: 'Fried Rice', price: 1200 },
+    { id: 3, name: 'Pounded Yam & Egusi', price: 2000 },
+    { id: 4, name: 'Suya', price: 1000 },
+    { id: 5, name: 'Plantain', price: 500 }
+  ];
+
+  function handleAddToCart(item) {
+    setCartItems(prev => {
+      const existing = prev.find(i => i.id === item.id);
+      if (existing) {
+        return prev.map(i =>
+          i.id === item.id ? { ...i, quantity: (i.quantity || 0) + 1 } : i
+        );
+      }
+      return [...prev, { ...item, quantity: 1 }];
+    });
+  }
+
+  function handleRemoveFromCart(itemId) {
+    setCartItems(prev => prev.filter(i => i.id !== itemId));
+  }
+
+  function handleUpdateQuantity(itemId, newQuantity) {
+    if (newQuantity <= 0) {
+      handleRemoveFromCart(itemId);
+      return;
+    }
+    setCartItems(prev => prev.map(i =>
+      i.id === itemId ? { ...i, quantity: newQuantity } : i
+    ));
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="restaurant-app">
+      <h1>🍽️ Naija Restaurant</h1>
+      <div className="container">
+        <MenuList
+          items={menuItems}
+          onAddToCart={handleAddToCart}
+        />
+        <Cart
+          items={cartItems}
+          onRemove={handleRemoveFromCart}
+          onUpdateQuantity={handleUpdateQuantity}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
