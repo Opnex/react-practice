@@ -1,0 +1,161 @@
+.quizContainer {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.scoreBoard {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.scoreText {
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+.scoreNumbers {
+  font-weight: 600;
+  color: #339af0;
+}
+
+.questionContainer {
+  margin: 2rem 0;
+}
+
+.questionTitle {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.questionText {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.optionButton {
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1rem;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.optionButton::before {
+  content: "○";
+  position: absolute;
+  left: 1rem;
+  font-size: 1.2rem;
+}
+
+.optionButton:hover {
+  background-color: #e9ecef;
+  transform: translateX(5px);
+}
+
+.optionButton.selected {
+  background-color: #339af0;
+  border-color: #339af0;
+  color: white;
+}
+
+.optionButton.selected::before {
+  content: "●";
+}
+
+.optionButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.feedback {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.correct {
+  background-color: #37b24d;
+  color: white;
+}
+
+.incorrect {
+  background-color: #f03e3e;
+  color: white;
+}
+
+.completion {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.completion h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.completion p {
+  font-size: 1.2rem;
+  color: #495057;
+  margin-bottom: 2rem;
+}
+
+.restartButton {
+  padding: 1rem 2rem;
+  background-color: #339af0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.restartButton:hover {
+  background-color: #228be6;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

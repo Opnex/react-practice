@@ -1,0 +1,95 @@
+.like-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #706bff 0%, #5296ee 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  margin: 2rem auto;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.like-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  min-width: 120px;
+  justify-content: center;
+}
+
+/* Step 3: Different colors for liked vs unliked */
+.like-btn.unliked {
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid #ddd;
+}
+
+.like-btn.liked {
+  background-color: #ff4757;
+  color: white;
+  border: 2px solid #ff4757;
+}
+
+.like-btn:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.like-btn:active:not(.disabled) {
+  transform: translateY(0);
+}
+
+/* Disabled state for challenge */
+.like-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.like-btn.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.emoji {
+  font-size: 1.4rem;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.like-count {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.instruction {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Animation for like */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.like-btn:not(.disabled) .emoji {
+  animation: pulse 0.3s ease;
+}
