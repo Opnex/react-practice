@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <header className="header">
-      <h1> Naija Expense Tracker</h1>
+      <h1> Opnex Expense Tracker</h1>
       <p className="date">{today}</p>
     </header>
   );

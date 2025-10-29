@@ -4,7 +4,7 @@ import AddExpenseForm from './components/AddExpenseForm';
 import CategoryFilter from './components/CategoryFilter';
 import ExpenseStats from './components/ExpenseStats';
 import ExpenseList from './components/ExpenseList';
-// import './ExpenseTracker.css';
+import './components/ExpenseTracker.css';
 
 function App() {
   const [expenses, setExpenses] = useState([]);

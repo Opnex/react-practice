@@ -39,7 +39,7 @@ function AddExpenseForm({ onAddExpense }) {
       <div className="form-grid">
         <input
           type="text"
-          placeholder="E.g., Lunch at Mama Put"
+          placeholder="E.g., Opnex choice"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           className="form-input"
