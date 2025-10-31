@@ -60,10 +60,10 @@ function AddExpenseForm({ onAddExpense }) {
           className="form-select"
         >
           <option value="Food">Food</option>
+          <option value="Education">Education</option>
           <option value="Transport">Transport</option>
-          <option value="Bills">Bills</option>
           <option value="Entertainment">Entertainment</option>
-          <option value="Others">Others</option>
+          <option value="Bills">Bills</option>
         </select>
         
         <button type="submit" className="btn-primary">

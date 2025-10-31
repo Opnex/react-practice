@@ -1,5 +1,5 @@
 function CategoryFilter({ selectedCategory, onCategoryChange }) {
-  const categories = ['All', 'Food', 'Transport', 'Bills', 'Entertainment', 'Others'];
+  const categories = ['All', 'Food', 'Education', 'Transport', 'Entertainment', 'Bills'];
   
   const getCategoryColor = (category) => {
     const colors = {
