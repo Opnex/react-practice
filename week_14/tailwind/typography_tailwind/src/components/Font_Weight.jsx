@@ -1,6 +1,6 @@
 function Font_Weight() {
     return (
-        <div className="p-8">
+        <div className="p-8 text-center" >
             <p className="font-thin">Thin - 100</p>
             <p className="font-extralight">Extra Light - 200</p>
             <p className="font-light">Light - 300</p>

@@ -1,6 +1,6 @@
 function Font_Size() {
     return (
-        <div className="p-8">
+        <div className="p-8 text-center">
             <p className="text-xs">Extra Small Text</p>
             <p className="text-sm">Small Text</p>
             <p className="text-base">Base Text (16px)</p>
